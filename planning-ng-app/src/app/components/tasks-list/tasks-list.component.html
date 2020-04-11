@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+<mat-list>
+  <mat-list-item *ngFor="let task of tasks">
+    <div mat-line>{{task.name}}</div>
+    <div mat-line>{{task.deadline | date}}</div>
+  </mat-list-item>
+</mat-list>
+
+
+</body>
+</html>
