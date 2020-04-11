@@ -15,19 +15,19 @@ export class TasksListComponent {
   tasks: TasksList[] = [
     {
       name: 'Paint the eggs',
-      deadline: new Date('2020-04-11T11:00:00.01')
+      deadline: new Date(2020, 3, 11, 11, 15)
     },
     {
       name: 'Go to work',
-      deadline: new Date(2020,3,14,6,15,1)
+      deadline: new Date(2020,3,14,6,15)
     },
     {
       name: 'Bake a cake',
-      deadline: new Date(2020,3,11,11,25,1)
+      deadline: new Date(2020,3,11,11,25)
     },
     {
       name: 'Pick up the car from mechanic',
-      deadline: new Date(2020,3,15,16,3,5)
+      deadline: new Date(2020,3,15,16,3)
     }
   ];
 }

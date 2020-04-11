@@ -8,7 +8,7 @@
 <mat-list>
   <mat-list-item *ngFor="let task of tasks">
     <div mat-line>{{task.name}}</div>
-    <div mat-line>{{task.deadline | date}}</div>
+    <div mat-line>{{task.deadline | date:'dd/mm/yyyy hh:mm'}}</div>
   </mat-list-item>
 </mat-list>
 
