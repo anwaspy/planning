@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {TodoList, TasksListClientService} from "../services/services/tasksList-client.service";
 
-export interface TasksList {
+/*export interface TasksList {
   name: string;
   deadline: Date;
-}
+}*/
 
 @Component({
   selector: 'tasks-list',
@@ -11,8 +12,19 @@ export interface TasksList {
   styleUrls: ['./tasks-list.component.css']
 })
 
-export class TasksListComponent {
-  tasks: TasksList[] = [
+export class TasksListComponent implements OnInit {
+  todoList : TodoList[];
+
+  constructor(private tasksListClientService : TasksListClientService) {
+  }
+
+  ngOnInit(): void {
+    this.tasksListClientService.getTasks().subscribe(value => {
+      this.todoList = value;
+    });
+  }
+
+/*  tasks: TasksList[] = [
     {
       name: 'Paint the eggs',
       deadline: new Date(2020, 3, 11, 11, 15)
@@ -29,6 +41,6 @@ export class TasksListComponent {
       name: 'Pick up the car from mechanic',
       deadline: new Date(2020,3,15,16,3)
     }
-  ];
+  ];*/
 }
 
