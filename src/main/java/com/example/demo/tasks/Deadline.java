@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.example.demo.tasks;
 
 public class Deadline {
 
@@ -54,12 +54,5 @@ public class Deadline {
 
     public void setMinute(int minute) {
         this.minute = minute;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(day).append("-").append(month).append("-").append(year).append(" ").append(hour).append(":").append(minute);
-        return sb.toString();
     }
 }
