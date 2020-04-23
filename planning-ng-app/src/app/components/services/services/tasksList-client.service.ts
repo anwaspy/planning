@@ -24,7 +24,6 @@ export class TasksListClientService {
 }
 
  export interface TodoList {
-  id: any;
   name: string;
   deadline: Deadline;
 }
