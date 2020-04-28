@@ -22,7 +22,8 @@ import { HttpClientModule} from "@angular/common/http";
     MatIconModule,
     HttpClientModule
   ],
-  providers: []
+  providers: [],
+  bootstrap: [AppComponent]
 
 })
 export class AppModule { }

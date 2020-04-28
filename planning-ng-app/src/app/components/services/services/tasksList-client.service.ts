@@ -10,20 +10,12 @@ export class TasksListClientService {
   constructor(private httpClient: HttpClient) {
   }
 
-  public getTasks(): Observable<TodoList[]> {
-    return this.httpClient.get<TodoList[]>('http://localhost:8082/tasks');
+  public getTasks(): Observable<TasksList[]> {
+    return this.httpClient.get<TasksList[]>('http://localhost:8082/tasks');
   }
 }
 
-  export interface Deadline {
-  day: number;
-  month: number;
-  year: number;
-  hour: number;
-  minute: number;
-}
-
- export interface TodoList {
+ export interface TasksList {
   name: string;
-  deadline: Deadline;
+  deadline: Date;
 }

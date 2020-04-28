@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {TodoList, TasksListClientService} from "../services/services/tasksList-client.service";
+import {TasksList, TasksListClientService} from "../services/services/tasksList-client.service";
 
 /*export interface TasksList {
   name: string;
@@ -13,14 +13,14 @@ import {TodoList, TasksListClientService} from "../services/services/tasksList-c
 })
 
 export class TasksListComponent implements OnInit {
-  todoList : TodoList[];
+  tasksList : TasksList[];
 
   constructor(private tasksListClientService : TasksListClientService) {
   }
 
   ngOnInit(): void {
     this.tasksListClientService.getTasks().subscribe(value => {
-      this.todoList = value;
+      this.tasksList = value;
     });
   }
 
