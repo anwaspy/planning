@@ -1,11 +1,13 @@
 package com.example.demo.tasks;
 
+import java.util.Date;
+
 public class Tasks {
 
     private String name;
-    private Deadline deadline;
+    private Date deadline;
 
-    public Tasks(String name, Deadline deadline) {
+    public Tasks(String name, Date deadline) {
         this.name = name;
         this.deadline = deadline;
     }
@@ -18,11 +20,11 @@ public class Tasks {
         this.name = name;
     }
 
-    public Deadline getDeadline() {
+    public Date getDeadline() {
         return deadline;
     }
 
-    public void setDeadline(Deadline deadline) {
+    public void setDeadline(Date deadline) {
         this.deadline = deadline;
     }
 }
