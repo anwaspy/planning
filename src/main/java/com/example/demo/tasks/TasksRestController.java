@@ -14,9 +14,9 @@ public class TasksRestController {
         this.tasksService = tasksService;
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/tasks")
     public List<Tasks> showAllTasks(){
         return tasksService.showAllTasks();
     }
-
 }
