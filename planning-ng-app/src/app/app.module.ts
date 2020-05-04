@@ -7,7 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TasksListComponent } from './components/tasks-list/tasks-list.component';
 import {MatListModule} from "@angular/material/list";
 import {MatIconModule} from "@angular/material/icon";
-import { HttpClientModule} from "@angular/common/http";
+import {HttpClientModule} from "@angular/common/http";
+import {TasksListClientService} from "./components/services/services/tasksList-client.service";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule} from "@angular/common/http";
     MatIconModule,
     HttpClientModule
   ],
-  providers: [],
+
+  providers: [TasksListClientService],
   bootstrap: [AppComponent]
 
 })
