@@ -1,12 +1,7 @@
 
-<!--<mat-list>-->
-<!--  <mat-list-item *ngFor="let task of tasks">-->
-<!--    <div mat-line>{{task.name}}</div>-->
-<!--    <div mat-line>{{task.deadline | date:'dd/mm/yyyy hh:mm'}}</div>-->
-<!--  </mat-list-item>-->
-<!--</mat-list>-->
+<h2>Tasks List</h2>
 
-
-<div>
-  <h2>{{task}}</h2>
+<div *ngFor="let task of tasks">
+  Task: {{task.name}} <br>
+  Deadline: {{task.deadline | date: 'yy/mm/dd hh:mm'}}<hr>
 </div>

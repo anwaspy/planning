@@ -5,18 +5,18 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class TasksRestController {
 
-    private TasksService tasksService;
+    private final TasksService tasksService;
 
     @Autowired
     public TasksRestController(TasksService tasksService){
         this.tasksService = tasksService;
     }
 
-    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/tasks")
-    public List<Tasks> showAllTasks(){
-        return tasksService.showAllTasks();
+    public List<Task> findAll(){
+        return tasksService.findAll();
     }
 }

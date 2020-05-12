@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { TasksListClientService } from './tasksList-client.service';
 
-describe('TaskslistClientService', () => {
+describe('TasksListClientService', () => {
   let service: TasksListClientService;
 
   beforeEach(() => {
